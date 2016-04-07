@@ -4,4 +4,8 @@ class ProductsController < ApplicationController
     @products = Product.includes(:photo)
   end
 
+  def show
+    @product = Product.find(params[:id])
+  end
+
 end
