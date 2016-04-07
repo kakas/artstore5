@@ -16,6 +16,8 @@
 !/log/.keep
 /tmp
 
+/public/uploads
+
 *.swp
 *.swo
 erd.pdf
