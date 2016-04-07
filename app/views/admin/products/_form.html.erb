@@ -3,5 +3,16 @@
   <%= f.input :description %>
   <%= f.input :quantity %>
   <%= f.input :price %>
+
+  <% if @photo.image.present? %>
+    <span>目前圖片</span>
+    <br>
+    <%= image_tag @photo.image.thumb.url %>
+  <% end %>
+
+  <%= f.simple_fields_for :photo do |c| %>
+    <%= c.input :image, as: :file %>
+  <% end %>
+
   <%= f.submit "Submit", class: "btn btn-primary", data: { disable_with: "Submitting..." } %>
 <% end %>
