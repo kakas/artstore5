@@ -18,6 +18,10 @@ Rails.application.routes.draw do
     post :add_to_cart, on: :member
   end
 
-  resources :carts
+  resources :carts do
+    post :checkout, on: :collection
+  end
+
+  resources :orders
 
 end
