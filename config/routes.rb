@@ -22,6 +22,8 @@ Rails.application.routes.draw do
     post :checkout, on: :collection
   end
 
-  resources :orders
+  resources :orders do
+    get :pay_with_credit_card, on: :member
+  end
 
 end
