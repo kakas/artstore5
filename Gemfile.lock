@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    aasm (4.5.0)
     actionmailer (4.2.3)
       actionpack (= 4.2.3)
       actionview (= 4.2.3)
@@ -212,6 +213,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  aasm
   awesome_rails_console
   better_errors
   bootstrap-sass
