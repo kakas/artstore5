@@ -23,6 +23,10 @@ Rails.application.routes.draw do
     delete :clean, on: :collection
   end
 
+  namespace :account do
+    resources :orders
+  end
+
   resources :orders do
     get :pay_with_credit_card, on: :member
   end
