@@ -1,7 +1,7 @@
 class CartItemsController < ApplicationController
 
   def update
-    @item = current_cart.cart_items.find_by_product_id(params[:id])
+    @item = current_cart.find_cart_item(params[:id])
     if @item.product.quantity >= item_params[:quantity].to_i
       @item.update(item_params)
       flash[:notice] = "成功變更數量"
@@ -13,7 +13,7 @@ class CartItemsController < ApplicationController
   end
 
   def destroy
-    @item = current_cart.cart_items.find_by_product_id(params[:id])
+    @item = current_cart.find_cart_item(params[:id])
     flash[:warning] = "成功將#{@item.product.title}從購物車刪除"
     @item.destroy
 
