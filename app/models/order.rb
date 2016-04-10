@@ -53,7 +53,7 @@ class Order < ActiveRecord::Base
     event :deliver do
       transitions from: :shipping,              to: :shipped
     end
-    event :retrun_good do
+    event :return_good do
       transitions from: :shipped,               to: :good_returned
     end
     event :cancell_order do
