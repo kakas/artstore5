@@ -27,4 +27,6 @@ Rails.application.routes.draw do
     get :pay_with_credit_card, on: :member
   end
 
+  resources :items, controller: "cart_items"
+
 end
