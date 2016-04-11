@@ -21,3 +21,6 @@
 *.swp
 *.swo
 erd.pdf
+
+# Ignore application configuration
+/config/application.yml
