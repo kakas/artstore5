@@ -57,4 +57,5 @@ group :development, :test do
   gem 'bullet'
   gem 'rails-erd'
   gem 'pry-rails'
+  gem 'letter_opener'
 end
