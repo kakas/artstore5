@@ -77,7 +77,16 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  config.action_mailer.default_url_options = { host: 'https://git.heroku.com/kakas-second-hand-store.git' }
+  config.action_mailer.default_url_options = { host: 'https://kakas-second-hand-store.herokuapp.com/' }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    port:           587,
+    address:        "smtp.mailgun.org",
+    user_name:      ENV["mailgun_user"],
+    password:       ENV["mailgun_secret"],
+    domain:         "sandbox58c204448c7b4c70828c4bbb94a1e92b.mailgun.org",
+    authentication: :plain
+  }
 
   config.after_initialize do
     Pay2go.integration_mode = :development
