@@ -129,6 +129,7 @@ GEM
       mini_portile2 (~> 2.0.0.rc2)
     orm_adapter (0.5.0)
     pay2go (0.1.0)
+    pg (0.18.4)
     pry (0.10.3)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -167,6 +168,11 @@ GEM
       ruby-graphviz (~> 1.2)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
+    rails_12factor (0.0.3)
+      rails_serve_static_assets
+      rails_stdout_logging
+    rails_serve_static_assets (0.0.5)
+    rails_stdout_logging (0.0.5)
     railties (4.2.3)
       actionpack (= 4.2.3)
       activesupport (= 4.2.3)
@@ -245,10 +251,12 @@ DEPENDENCIES
   meta_request
   mini_magick
   pay2go
+  pg
   pry-rails
   quiet_assets
   rails (= 4.2.3)
   rails-erd
+  rails_12factor
   roadie (= 2.4.3)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
