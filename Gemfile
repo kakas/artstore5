@@ -39,7 +39,7 @@ gem 'mini_magick'
 
 gem 'font-awesome-rails'
 gem 'aasm'
-gem 'roadie', "2.4.3"
+# gem 'roadie', "2.4.3"
 gem 'figaro'
 gem 'pay2go'
 
